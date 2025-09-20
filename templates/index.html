@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma To-Do List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ma liste de tâches</h1>
+
+        <form method="POST" action="/add">
+            <input type="text" name="title" placeholder="Nouvelle tâche" required>
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <ul>
+        {% for task in tasks %}
+            <li class="{{ 'done' if task['done'] else '' }}">
+                {{ task['title'] }}
+                {% if not task['done'] %}
+                    <a href="/done/{{ task['id'] }}">[Terminer]</a>
+                {% endif %}
+                <a href="/delete/{{ task['id'] }}">[Supprimer]</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
