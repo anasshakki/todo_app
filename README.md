@@ -59,6 +59,6 @@ http://127.0.0.1:5000
 -> Supprimer une tâche
 
 # Auteur :
-Anass Hakki
+Mohamed Anass HAKKI
 Génie informatique 3A
 
