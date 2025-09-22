@@ -19,28 +19,6 @@ Ce projet est une mini application web de type **"To-do List"** réalisée en **
 - JavaScript (pour les effets visuels)
 
 ## Structure du projet
-
-# Mini Application de Gestion de Tâches (Flask)
-
-Ce projet est une mini application web de type **"To-do List"** réalisée en **Python** avec le framework **Flask**.
-
-## Fonctionnalités
-- Ajouter une tâche avec titre, description et date d’échéance
-- Afficher la liste des tâches :
-  - Tâches en attente
-  - Tâches terminées
-- Marquer une tâche comme terminée
-- Modifier une tâche
-- Supprimer une tâche (avec effet visuel en JavaScript)
-- 🎨 Interface améliorée avec un background et un peu de style CSS
-
-## Technologies utilisées
-- Python (Flask)
-- SQLite (base de données)
-- HTML / CSS
-- JavaScript (pour les effets visuels)
-
-## Structure du projet
 todo_app/
 │ app.py # Fichier principal Flask
 │ init_db.py # Script pour créer la base de données
