@@ -26,11 +26,11 @@ todo_app :
    - tasks.db  (Base SQLite)
    - README.md  (Documentation)
 
-   templates :
+  - templates :
     - index.html  (Page principale)
     - edit.html  (Page pour modifier une tâche)
 
-   static :
+  - static :
      - style.css  (Feuille de style CSS (background)
      - script.js  (Script JavaScript (effet suppression)
 
