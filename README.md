@@ -78,7 +78,7 @@ python app.py
 
 Voici un aperçu de l'interface de l'application :  
 
-![Interface de l'application](./screenshots/interface.png)
+![Interface de l'application](screenshots/interface.png)
 
 
 # 6. Ouvrir dans le navigateur
