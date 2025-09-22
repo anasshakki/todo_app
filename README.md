@@ -1,61 +1,85 @@
 # Mini Application de Gestion de Tâches (Flask)
 
-Ce projet est une mini application web de type "To-do List" réalisée en Python avec le framework Flask.
+Ce projet est une mini application web de type **"To-do List"** réalisée en **Python** avec le framework **Flask**.
 
 ## Fonctionnalités
-- Ajouter une tâche avec titre, description, date d’échéance
-- Afficher les tâches en attente et terminées
+- Ajouter une tâche avec titre, description et date d’échéance
+- Afficher la liste des tâches :
+  - Tâches en attente
+  - Tâches terminées
 - Marquer une tâche comme terminée
-- Supprimer une tâche
-- Modifier une tâche (optionnel)
+- Modifier une tâche
+- Supprimer une tâche (avec effet visuel en JavaScript)
+- 🎨 Interface améliorée avec un background et un peu de style CSS
 
 ## Technologies utilisées
 - Python (Flask)
 - SQLite (base de données)
 - HTML / CSS
+- JavaScript (pour les effets visuels)
 
-## Structure du projet : 
+## Structure du projet
 
+# Mini Application de Gestion de Tâches (Flask)
+
+Ce projet est une mini application web de type **"To-do List"** réalisée en **Python** avec le framework **Flask**.
+
+## Fonctionnalités
+- Ajouter une tâche avec titre, description et date d’échéance
+- Afficher la liste des tâches :
+  - Tâches en attente
+  - Tâches terminées
+- Marquer une tâche comme terminée
+- Modifier une tâche
+- Supprimer une tâche (avec effet visuel en JavaScript)
+- 🎨 Interface améliorée avec un background et un peu de style CSS
+
+## Technologies utilisées
+- Python (Flask)
+- SQLite (base de données)
+- HTML / CSS
+- JavaScript (pour les effets visuels)
+
+## Structure du projet
 todo_app/
-app.py  # Fichier principal Flask
-init_db.py  # Script pour créer la base de données
-tasks.db  # Fichier SQLite
-templates/
- └── index.html  # Page HTML
-static/
- └── style.css  # Style CSS
+│ app.py # Fichier principal Flask
+│ init_db.py # Script pour créer la base de données
+│ tasks.db # Base SQLite
+│ README.md # Documentation
+│
+├── templates/
+│ └── index.html # Page principale
+│ └── edit.html # Page pour modifier une tâche
+│
+├── static/
+│ └── style.css # Feuille de style CSS (background + mise en forme)
+│ └── script.js # Script JavaScript (effet suppression)
 
-
-## Lancer le projet localement
+## Installation et lancement du projet
 
 ```bash
 # 1. Créer un environnement virtuel (si pas déjà fait)
 python -m venv venv
 
 # 2. Activer l’environnement
-venv\Scripts\activate
+venv\Scripts\activate   # sous Windows
+source venv/bin/activate   # sous Linux / Mac
 
 # 3. Installer Flask
 pip install flask
 
-# 4. Créer la base de données
+# 4. Initialiser la base de données
 python init_db.py
 
-# 5. Lancer le serveur
+# 5. Lancer l’application
 python app.py
 
 # 6. Ouvrir dans le navigateur
 http://127.0.0.1:5000
 
-# Fonctionnalités
-
--> Ajouter une tâche
-
--> Marquer comme terminée
-
--> Supprimer une tâche
 
 # Auteur :
 Mohamed Anass HAKKI
 Génie informatique 3A
+POLYTECH MARSEILLE
 
