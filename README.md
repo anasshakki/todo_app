@@ -20,19 +20,19 @@ Ce projet est une mini application web de type **"To-do List"** réalisée en **
 
 ## Structure du projet
 
-todo_app/
-├── app.py # Fichier principal Flask
-├── init_db.py # Script pour créer la base de données
-├── tasks.db # Base SQLite
-├── README.md # Documentation
+todo_app
+    app.py # Fichier principal Flask
+    init_db.py # Script pour créer la base de données
+    tasks.db # Base SQLite
+    README.md # Documentation
 
-├── templates/
-│ ├── index.html # Page principale
-│ └── edit.html # Page pour modifier une tâche
+  templates/
+     index.html # Page principale
+     edit.html # Page pour modifier une tâche
 
-└── static/
-├── style.css # Feuille de style CSS (background + mise en forme)
-└── script.js # Script JavaScript (effet suppression)
+  static/
+     style.css # Feuille de style CSS (background + mise en forme)
+     script.js # Script JavaScript (effet suppression)
 
 ## Installation et lancement du projet
 
