@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS tasks (
 
 conn.commit()
 conn.close()
-print("✔ Base de données créée avec succès.")
+print(" Base de données créée avec succès.")
