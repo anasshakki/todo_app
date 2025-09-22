@@ -53,13 +53,6 @@ python init_db.py
 # 5. Lancer l’application
 python app.py
 
-## 📸 Aperçu de l'application
-
-Voici un aperçu de l'interface de l'application :
-
-![Interface de l'application](screenshots/interface.png)
-
-
 # 6. Ouvrir dans le navigateur
 http://127.0.0.1:5000
 
