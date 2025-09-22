@@ -52,9 +52,9 @@ python init_db.py
 # 5. Lancer l’application
 python app.py
 
-## 👀 Aperçu de l'application
+## 📸 Aperçu de l'application
 
-Voici un aperçu de l'interface de l'application :  
+Voici un aperçu de l'interface de l'application :
 
 ![Interface de l'application](screenshots/interface.png)
 
