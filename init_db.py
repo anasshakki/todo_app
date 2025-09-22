@@ -1,16 +1,21 @@
 import sqlite3
 
-conn = sqlite3.connect("tasks.db")
-cursor = conn.cursor()
+DB_NAME = "tasks.db"
 
-cursor.execute("""
+conn = sqlite3.connect(DB_NAME)
+cur = conn.cursor()
+
+cur.execute("""
 CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
-    done BOOLEAN DEFAULT 0
+    description TEXT,
+    due_date TEXT,
+    done INTEGER NOT NULL DEFAULT 0
 )
 """)
 
 conn.commit()
 conn.close()
-print("✔ Base de données créée avec succès.")
+print("Base de données initialisée :", DB_NAME)
+

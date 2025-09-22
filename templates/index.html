@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Ma To-Do List</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="utf-8">
+    <title>Liste des tâches</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Ma liste de tâches</h1>
+    <h1>Liste des tâches</h1>
 
-        <form method="POST" action="/add">
-            <input type="text" name="title" placeholder="Nouvelle tâche" required>
-            <button type="submit">Ajouter</button>
-        </form>
+    <form method="POST" action="{{ url_for('add') }}">
+        <input type="text" name="title" placeholder="Titre" required>
+        <input type="text" name="description" placeholder="Description" required>
+        <input type="date" name="due_date" required>
+        <button type="submit">Ajouter</button>
+    </form>
 
-        <ul>
-        {% for task in tasks %}
-            <li class="{{ 'done' if task['done'] else '' }}">
-                {{ task['title'] }}
-                {% if not task['done'] %}
-                    <a href="/done/{{ task['id'] }}">[Terminer]</a>
-                {% endif %}
-                <a href="/delete/{{ task['id'] }}">[Supprimer]</a>
-            </li>
+    <h2>Tâches en attente</h2>
+    <ul>
+        {% for task in tasks if not task['done'] %}
+        <li>
+            <strong>{{ task['title'] }}</strong> - {{ task['description'] }} (à faire avant le {{ task['due_date'] }})
+            <a href="{{ url_for('complete', task_id=task['id']) }}">Terminer</a>
+            <a href="{{ url_for('edit', task_id=task['id']) }}">Modifier</a>
+            <a href="{{ url_for('delete', task_id=task['id']) }}" class="delete-btn">Supprimer</a>
+        </li>
         {% endfor %}
-        </ul>
-    </div>
+    </ul>
+
+    <h2>Tâches terminées</h2>
+    <ul>
+        {% for task in tasks if task['done'] %}
+        <li>
+            <del><strong>{{ task['title'] }}</strong> - {{ task['description'] }} (terminée le {{ task['due_date'] }})</del>
+            <a href="{{ url_for('delete', task_id=task['id']) }}" class="delete-btn">Supprimer</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

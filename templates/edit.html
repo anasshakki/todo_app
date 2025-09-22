@@ -1,20 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Modifier tâche</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Modifier une tâche</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Modifier</h1>
-    <form method="post" action="{{ url_for('edit', task_id=task['id']) }}">
-      <input name="title" value="{{ task['title'] }}" required>
-      <input name="description" value="{{ task['description'] or '' }}">
-      <input type="date" name="due_date" value="{{ task['due_date'] or '' }}">
-      <button type="submit">Enregistrer</button>
+    <h1>Modifier la tâche</h1>
+
+    <form method="POST" action="/update/{{ task['id'] }}">
+        <input type="text" name="title" value="{{ task['title'] }}" required>
+        <input type="text" name="description" value="{{ task['description'] }}" required>
+        <input type="date" name="due_date" value="{{ task['due_date'] }}" required>
+        <button type="submit">Mettre à jour</button>
     </form>
-    <p><a href="{{ url_for('index') }}">Retour</a></p>
-  </div>
+
+    <a href="/">Retour à la liste</a>
 </body>
 </html>
