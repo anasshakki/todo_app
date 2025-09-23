@@ -37,7 +37,7 @@ todo_app :
 ## Installation et lancement du projet
 
 ```bash
-# 1. Créer un environnement virtuel (si pas déjà fait)
+# 1. Créer un environnement virtuel 
 python -m venv venv
 
 # 2. Activer l’environnement
@@ -55,10 +55,4 @@ python app.py
 
 # 6. Ouvrir dans le navigateur
 http://127.0.0.1:5000
-
-
-# Auteur :
-Mohamed Anass HAKKI
-Génie informatique 3A
-POLYTECH MARSEILLE
 
