@@ -17,5 +17,9 @@ CREATE TABLE IF NOT EXISTS tasks (
 
 conn.commit()
 conn.close()
+<<<<<<< HEAD
 print("Base de données initialisée :", DB_NAME)
 
+=======
+print(" Base de données créée avec succès.")
+>>>>>>> 4bbc64aadbf3605d3546048649ccac5ee1e0e3f7
